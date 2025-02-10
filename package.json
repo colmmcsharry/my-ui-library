@@ -17,6 +17,7 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
+		"@rollup/rollup-darwin-x64": "^4.34.6",
 		"classnames": "^2.5.1",
 		"prettier": "^3.4.2",
 		"react": "^19.0.0",

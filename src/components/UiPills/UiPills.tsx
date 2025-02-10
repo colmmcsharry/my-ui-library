@@ -39,7 +39,7 @@ export const UiPills: React.FC<IUiPills> = ({
 			"grid grid-flow-col justify-start w-max",
 			"items-center",
 			"gap-xxxs",
-			"px-xxs py-xxxs",
+			"px-sm py-xxs",
 			"overflow-hidden",
 			rounded ? "rounded-full": "rounded",
 			kindClasses[kind],
