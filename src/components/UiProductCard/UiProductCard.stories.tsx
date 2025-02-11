@@ -3,6 +3,7 @@ import React from "react";
 import { UiProductCard } from "./UiProductCard";
 import { UiIcon } from "../UiIcon";
 import { ESize } from "../../_types/sizing";
+import { EBadgeKind } from "../UiPills";
 
 const meta = {
 	title: "Components/UiProductCard",
@@ -30,6 +31,20 @@ const meta = {
 		pillText: {
 			description: "The text or component displayed in the pill",
 		},
+		badgeKind: {
+			control: {
+				type: "select",
+			},
+			options: Object.values(EBadgeKind),
+			description: "Badge Kind",
+		},
+		pillKind: {
+			control: {
+				type: "select",
+			},
+			options: Object.values(EBadgeKind),
+			description: "Pill Kind",
+		},
 	},
 	args: {
 		location: "McGowan's Pub",
@@ -37,6 +52,8 @@ const meta = {
 		badgeText: "",
 		heading: null,
 		pillText: "",
+		badgeKind: EBadgeKind.ACCENT_ALT,
+		pillKind: EBadgeKind.ACCENT_ALT,
 	},
 } satisfies Meta<typeof UiProductCard>;
 

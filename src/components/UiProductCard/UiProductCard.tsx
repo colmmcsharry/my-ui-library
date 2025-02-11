@@ -6,23 +6,27 @@ import {
 
 type TUiProductCardProps = {
 	badgeText?: string;
+	badgeKind?: EBadgeKind;
+	pillText?: string;
+	pillKind?: EBadgeKind;
 	location?: React.ReactNode;
 	date?: React.ReactNode;
 	heading?: React.ReactNode;
 	image?: string;
-	pillText?: string;
 }
 
 export const UiProductCard: React.FC<TUiProductCardProps> = ({ badgeText,
+	badgeKind = EBadgeKind.ACCENT_ALT,
+	pillText,
+	pillKind = EBadgeKind.ACCENT_ALT,
 	image,
 	location,
 	date,
-	pillText,
 	heading }) => {
 	return (
 		<div className='relative
 			flex
-			max-w-4xl
+			max-w-2xl
 			flex-col
 			gap-sm
 			rounded-2xl
@@ -30,17 +34,16 @@ export const UiProductCard: React.FC<TUiProductCardProps> = ({ badgeText,
 			border-secondary-alt-500
 			bg-white
 			px-0
-			py-sm
 			pt-0'>
 
 			{ badgeText && (
 				<div className="!absolute -top-xxs right-xs z-10">
-					<UiPills rounded kind={ EBadgeKind.ACCENT_ALT }>{ badgeText }</UiPills>
+					<UiPills rounded kind={ badgeKind }>{ badgeText }</UiPills>
 				</div>
 			) }
 
 			{ image && (
-				<img src={ image } className="relative h-auto w-full rounded-2xl rounded-b-none object-cover" />
+				<img src={ image } className="relative size-full rounded-b-none rounded-t-2xl object-cover" />
 			) }
 
 			<div className="px-sm">
@@ -49,7 +52,7 @@ export const UiProductCard: React.FC<TUiProductCardProps> = ({ badgeText,
 						<UiPills
 							rounded
 							size={ EBadgeSize.MEDIUM }
-							kind={ EBadgeKind.ACCENT_ALT }>{ pillText }</UiPills>
+							kind={ pillKind }>{ pillText }</UiPills>
 					</div>
 				) }
 
