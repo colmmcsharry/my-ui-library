@@ -105,7 +105,7 @@ export const Details: Story = {
 											size={ ETypographySizes.SM }
 											color={ EColors.SECONDARY_400 }
 										>
-											{ "jane.doe@bonkers.ie" }
+											{ "jane.doe@whaterver.ie" }
 										</UiTypography>
 
 									</div>

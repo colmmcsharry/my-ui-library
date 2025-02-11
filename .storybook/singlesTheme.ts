@@ -1,9 +1,9 @@
 import { create } from "@storybook/theming/create";
 
 const brand = {
-	brandTitle: "Bonkers-UI Design System",
-	brandUrl: "https://github.com/bonkers-ie/bonkers-ui",
-	brandImage: "https://web-assets.bonkers.ie/packs/static/logo/bonkers_logo-279f0cff5a9b71e3059a.svg",
+	brandTitle: "Irish Singles Guide",
+	brandUrl: "https://github.com/colmmcsharry/my-ui-library",
+	brandImage: "shamlove.png",
 	fontBase:
 		'"Inter", Helvetica, Arial, system-ui, sans-serif, "Segoe UI", Roboto, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
 };

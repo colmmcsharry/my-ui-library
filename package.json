@@ -1,7 +1,7 @@
 {
-	"name": "bonkers-ui",
+	"name": "my-ui-library",
 	"version": "2.0.0",
-	"description": "Bonkers ui library",
+	"description": "My ui library",
 	"author": "cc6.magister@gmail.com",
 	"scripts": {
 		"dev": "storybook dev -p 6006",
@@ -84,9 +84,9 @@
 	},
 	"keywords": [],
 	"license": "ISC",
-	"main": "./bonkers-ui.umd.js",
-	"module": "./index.js",
-	"types": "./index.d.ts",
+	"main": "./dist/my-ui-library.umd.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
 	"exports": {
 		".": "./index.js",
 		"./types": {

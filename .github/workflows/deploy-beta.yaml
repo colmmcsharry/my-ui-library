@@ -1,12 +1,9 @@
 name: Deploy beta
-# site:
-#   use_directory_urls: false
-#   siteUrl: https://bonkers-ie.github.io/bonkers-ui/
-#   site_url: https://bonkers-ie.github.io/bonkers-ui/
-on:
-    push:
-        branches:
-            - develop
+# Workflow temporarily disabled
+# on:
+#     push:
+#         branches:
+#             - develop
 jobs:
     lint:
         runs-on: ubuntu-latest
@@ -22,10 +19,11 @@ jobs:
             - run: bun lint
             - run: bun lint:style
             # - run: bun run test
-            - run: bun build-storybook
-            - name: Deploy
-              uses: peaceiris/actions-gh-pages@v4
-              with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./storybook-static
-                  cname: https://bonkers-ie.github.io/bonkers-ui/
+            # Deployment steps commented out
+            # - run: bun build-storybook
+            # - name: Deploy
+            #   uses: peaceiris/actions-gh-pages@v4
+            #   with:
+            #       github_token: ${{ secrets.GITHUB_TOKEN }}
+            #       publish_dir: ./storybook-static
+            #       cname: https://bonkers-ie.github.io/bonkers-ui/

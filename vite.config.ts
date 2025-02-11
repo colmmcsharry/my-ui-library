@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
 import * as path from "node:path";
 
-// https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [
 		dts({
@@ -19,7 +18,7 @@ export default defineConfig({
 		sourcemap: true,
 		lib: {
 			entry: path.resolve(__dirname, "src/index.ts"),
-			name: "bonkers-ui",
+			name: "my-ui-library", 
 		},
 		rollupOptions: {
 			external: ["react", "react/jsx-runtime", "tailwindcss", "classnames", "prop-types", "react-is", "@fortawesome/fontawesome-svg-core", "@fortawesome/react-fontawesome"],
@@ -27,7 +26,7 @@ export default defineConfig({
 			output: [
 				{
 					format: "umd",
-					name: "bonkers-ui",
+					name: "my-ui-library", 
 					exports: "named",
 					globals: {
 						react: "React"
@@ -35,7 +34,7 @@ export default defineConfig({
 				},
 				{
 					strict: true,
-					name: "bonkers-ui",
+					name: "my-ui-library", 
 					format: "es",
 					exports: "named",
 					entryFileNames: "[name].js",

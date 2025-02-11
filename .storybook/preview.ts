@@ -1,5 +1,5 @@
 import type { Preview } from "@storybook/react";
-import { light, dark } from "./bonkersTheme";
+import { light, dark } from "./singlesTheme";
 import { DocsContainer } from "./docsContainer";
 import "../src/main.css";
 import "../fontAwesome";

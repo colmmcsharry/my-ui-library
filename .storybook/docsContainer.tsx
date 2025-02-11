@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { light, dark } from "./bonkersTheme";
+import { light, dark } from "./singlesTheme";
 import { DocsContainer as BaseContainer, type DocsContainerProps } from "@storybook/blocks";
 import { DARK_MODE_EVENT_NAME } from "storybook-dark-mode";
 import { addons } from "@storybook/preview-api";

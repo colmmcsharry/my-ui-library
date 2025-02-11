@@ -3,10 +3,11 @@ name: Deploy
 #   use_directory_urls: false
 #   siteUrl: https://bonkers-ie.github.io/bonkers-ui/
 #   site_url: https://bonkers-ie.github.io/bonkers-ui/
-on:
-    push:
-        branches:
-            - master
+# Workflow temporarily disabled
+# on:
+#     push:
+#         branches:
+#             - master
 jobs:
     lint:
         runs-on: ubuntu-latest
@@ -22,8 +23,9 @@ jobs:
             - run: bun lint
             - run: bun lint:style
             # - run: bun run test
-            - run: bun run build
-            - run: bun run publish.ts
-              env:
-                  GITHUB_TOKEN: ${{ secrets.PERSONAL_SECRET_TOKEN }}
-                  NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+            # Deployment steps commented out
+            # - run: bun run build
+            # - run: bun run publish.ts
+            #   env:
+            #       GITHUB_TOKEN: ${{ secrets.PERSONAL_SECRET_TOKEN }}
+            #       NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

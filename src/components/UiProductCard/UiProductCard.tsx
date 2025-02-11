@@ -6,19 +6,19 @@ import {
 
 type TUiProductCardProps = {
 	badgeText?: string;
-	title?: React.ReactNode;
-	subtitle?: React.ReactNode;
-	header?: React.ReactNode;
+	location?: React.ReactNode;
+	date?: React.ReactNode;
+	heading?: React.ReactNode;
 	image?: string;
 	pillText?: string;
 }
 
 export const UiProductCard: React.FC<TUiProductCardProps> = ({ badgeText,
 	image,
-	title,
-	subtitle,
+	location,
+	date,
 	pillText,
-	header }) => {
+	heading }) => {
 	return (
 		<div className='relative
 			flex
@@ -53,9 +53,18 @@ export const UiProductCard: React.FC<TUiProductCardProps> = ({ badgeText,
 					</div>
 				) }
 
-				{ header }
+				{ heading }
 
 				<div className="grid gap-xxs">
+					<UiTypography
+						size={ ETypographySizes.XS }
+
+						align={ ETextAlign.LEFT }
+						color={ EColors.SECONDARY_400 }
+						lineHeight
+					>
+						{ date }
+					</UiTypography>
 					<UiTypography
 						size={ ETypographySizes.MD }
 						weight={ ETextWeight.BOLD }
@@ -63,17 +72,9 @@ export const UiProductCard: React.FC<TUiProductCardProps> = ({ badgeText,
 						color={ EColors.SECONDARY }
 						lineHeight
 					>
-						{ title }
+						{ location }
 					</UiTypography>
 
-					<UiTypography
-						size={ ETypographySizes.XS }
-						align={ ETextAlign.LEFT }
-						color={ EColors.SECONDARY_400 }
-						lineHeight
-					>
-						{ subtitle }
-					</UiTypography>
 				</div>
 			</div>
 		</div >
