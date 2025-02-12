@@ -9,11 +9,17 @@ const meta = {
 	title: "Components/UiProductCard",
 	component: UiProductCard,
 	argTypes: {
-		location: {
+		venue: {
 			control: {
 				type: "text",
 			},
-			description: "The location text",
+			description: "The venue text",
+		},
+		county: {
+			control: {
+				type: "text",
+			},
+			description: "The county text",
 		},
 		date: {
 			control: {
@@ -47,7 +53,8 @@ const meta = {
 		},
 	},
 	args: {
-		location: "McGowan's Pub",
+		venue: "McGowan's Pub",
+		county: "Dublin",
 		date: "27 Feb 2025",
 		badgeText: "",
 		heading: null,
@@ -100,7 +107,8 @@ export const Variants: Story = {
 
 export const Test1: Story = {
 	args: {
-		location: "This is a locationajhs",
+		venue: "This is a venue",
+		county: "This is a county",
 		date: "This is a date uablobv",
 		badgeText: "",
 		heading: null,

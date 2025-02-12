@@ -9,7 +9,8 @@ type TUiProductCardProps = {
 	badgeKind?: EBadgeKind;
 	pillText?: string;
 	pillKind?: EBadgeKind;
-	location?: React.ReactNode;
+	venue?: React.ReactNode;
+	county?: React.ReactNode;
 	date?: React.ReactNode;
 	heading?: React.ReactNode;
 	image?: string;
@@ -20,20 +21,24 @@ export const UiProductCard: React.FC<TUiProductCardProps> = ({ badgeText,
 	pillText,
 	pillKind = EBadgeKind.ACCENT_ALT,
 	image,
-	location,
+	venue,
+	county,
 	date,
 	heading }) => {
 	return (
 		<div className='relative
+			mx-auto
 			flex
+			w-full
 			max-w-2xl
 			flex-col
 			gap-sm
+			overflow-hidden
 			rounded-2xl
 			border
 			border-secondary-alt-500
 			bg-white
-			px-0
+			pb-sm
 			pt-0'>
 
 			{ badgeText && (
@@ -43,7 +48,7 @@ export const UiProductCard: React.FC<TUiProductCardProps> = ({ badgeText,
 			) }
 
 			{ image && (
-				<img src={ image } className="relative size-full rounded-b-none rounded-t-2xl object-cover" />
+				<img src={ image } className="relative size-full max-h-[200px] rounded-b-none rounded-t-2xl object-cover" />
 			) }
 
 			<div className="px-sm">
@@ -75,7 +80,10 @@ export const UiProductCard: React.FC<TUiProductCardProps> = ({ badgeText,
 						color={ EColors.SECONDARY }
 						lineHeight
 					>
-						{ location }
+						{ venue }
+						<br />
+
+						{ county }
 					</UiTypography>
 
 				</div>
